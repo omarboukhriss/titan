@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkHub Sousse - Membres</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="a8">
+    <nav class="a1">
+        <div class="a2">
+            <a href="index.html" class="a3">WorkHub Sousse</a>
+            <div class="a4">
+                <a href="index.html" class="a5">Accueil</a>
+                <a href="services.html" class="a5">Nos Espaces</a>
+                <a href="pricing.html" class="a5">Tarifs</a>
+                <a href="members.html" class="a5 a6">Membres</a>
+                <a href="equipments.html" class="a5">Équipements</a>
+                <a href="login.html" class="a7">Déconnexion</a>
+            </div>
+        </div>
+    </nav>
+    
+    <input type="checkbox" id="del_m1" class="q1">
+    <input type="checkbox" id="del_m2" class="q1">
+    <input type="checkbox" id="del_m3" class="q1">
+
+    <div class="o2">
+        <div class="o3 n3">
+            <h1 class="h2">Gestion des Membres</h1>
+            <a href="#add_member" class="f2 q6" style="width: auto;">+ Ajouter un membre</a>
+        </div>
+        <div class="n3 n5" style="overflow-x: auto;">
+            <table class="o4">
+                <thead>
+                    <tr>
+                        <th class="o5">ID</th>
+                        <th class="o5">Nom complet</th>
+                        <th class="o5">Email</th>
+                        <th class="o5">Formule</th>
+                        <th class="o5">Statut</th>
+                        <th class="o5">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="o6 o1" id="row_m1">
+                        <td class="o6">#1042</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Ahmed M.</td>
+                        <td class="o6">ahmed.m@email.com</td>
+                        <td class="o6"><span class="p2 p5">Pro</span></td>
+                        <td class="o6"><span class="p2 p3">Actif</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_member" class="o8 o9 q6">Modifier</a>
+                                <label for="del_m1" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="o6 o1" id="row_m2" style="background: #f9fafb;">
+                        <td class="o6">#1043</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Sarah B.</td>
+                        <td class="o6">sarah.b@email.com</td>
+                        <td class="o6"><span class="p2" style="background: #1f2937; color: #fff;">Business</span></td>
+                        <td class="o6"><span class="p2 p3">Actif</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_member" class="o8 o9 q6">Modifier</a>
+                                <label for="del_m2" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="o6 o1" id="row_m3">
+                        <td class="o6">#1044</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Walid T.</td>
+                        <td class="o6">walid.t@email.com</td>
+                        <td class="o6"><span class="p2" style="background: #e5e7eb; color: #374151;">Starter</span></td>
+                        <td class="o6"><span class="p2 p4">Expiré</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_member" class="o8 o9 q6">Modifier</a>
+                                <label for="del_m3" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Ajouter -->
+    <div id="add_member" class="q2">
+        <div class="q3">
+            <a href="#" class="q4">&times;</a>
+            <h2 class="q5">Ajouter un Membre</h2>
+            <form id="form_add_member">
+                <div class="e5">
+                    <label class="e6">Nom complet</label>
+                    <input type="text" name="nom" class="e7" required>
+                </div>
+                <div class="e5">
+                    <label class="e6">Email</label>
+                    <input type="email" name="email" class="e7" required>
+                </div>
+                <button type="submit" class="f2">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Modifier -->
+    <div id="edit_member" class="q2">
+        <div class="q3">
+            <a href="#" class="q4">&times;</a>
+            <h2 class="q5">Modifier le Membre</h2>
+            <form id="form_edit_member">
+                <div class="e5">
+                    <label class="e6">Nouveau Nom complet</label>
+                    <input type="text" name="nom" class="e7" required>
+                </div>
+                <div class="e5">
+                    <label class="e6">Nouvel Email</label>
+                    <input type="email" name="email" class="e7" required>
+                </div>
+                <button type="submit" class="f2">Mettre à jour</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact" class="d2">
+        <div class="d3">
+            <div>
+                <h3 class="d4">WorkHub Sousse</h3>
+                <p class="d5">Votre espace de coworking moderne conçu pour la productivité et l'innovation.</p>
+            </div>
+            <div>
+                <h3 class="d4">Liens rapides</h3>
+                <div class="d6">
+                    <a href="index.html" class="d7">Accueil</a>
+                    <a href="services.html" class="d7">Nos Espaces</a>
+                    <a href="pricing.html" class="d7">Tarifs</a>
+                    <a href="#contact" class="d7">Contact</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="d4">Horaires d'ouverture</h3>
+                <div class="d6">
+                    <p class="d5">Lun-Ven: 7h-22h</p>
+                    <p class="d5">Sam: 8h-20h</p>
+                    <p class="d5">Dim: 9h-18h</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="d4">Contact</h3>
+                <div class="d6">
+                    <p class="d5">Avenue Habib Bourguiba, Sousse</p>
+                    <p class="d5">+216 73 123 456</p>
+                    <p class="d5">contact@workhub-sousse.tn</p>
+                </div>
+            </div>
+        </div>
+        <div class="d8">
+            <p>Copyright © 2026 WorkHub Sousse</p>
+            <p>Projet étudiant ISG Sousse - Module AGL</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

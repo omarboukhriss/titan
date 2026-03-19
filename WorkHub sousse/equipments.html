@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkHub Sousse - Équipements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="a8">
+    <nav class="a1">
+        <div class="a2">
+            <a href="index.html" class="a3">WorkHub Sousse</a>
+            <div class="a4">
+                <a href="index.html" class="a5">Accueil</a>
+                <a href="services.html" class="a5">Nos Espaces</a>
+                <a href="pricing.html" class="a5">Tarifs</a>
+                <a href="members.html" class="a5">Membres</a>
+                <a href="equipments.html" class="a5 a6">Équipements</a>
+                <a href="login.html" class="a7">Déconnexion</a>
+            </div>
+        </div>
+    </nav>
+    
+    <input type="checkbox" id="del_e1" class="q1">
+    <input type="checkbox" id="del_e2" class="q1">
+    <input type="checkbox" id="del_e3" class="q1">
+    <input type="checkbox" id="del_e4" class="q1">
+
+    <div class="o2">
+        <div class="o3 n4">
+            <h1 class="h2">Gestion des Équipements</h1>
+            <a href="#add_eq" class="f2 q6" style="width: auto;">+ Ajouter un équipement</a>
+        </div>
+        <div class="n4 n6" style="overflow-x: auto;">
+            <table class="o4">
+                <thead>
+                    <tr>
+                        <th class="o5">Réf</th>
+                        <th class="o5">Nom de l'équipement</th>
+                        <th class="o5">Catégorie</th>
+                        <th class="o5">Emplacement</th>
+                        <th class="o5">État</th>
+                        <th class="o5">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="o6 o1" id="row_e1">
+                        <td class="o6">EQ-001</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Imprimante 3D Creality</td>
+                        <td class="o6">Impression</td>
+                        <td class="o6">Open Space</td>
+                        <td class="o6"><span class="p2 p3">Opérationnel</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_eq" class="o8 o9 q6">Modifier</a>
+                                <label for="del_e1" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="o6 o1" id="row_e2" style="background: #f9fafb;">
+                        <td class="o6">EQ-002</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Projecteur 4K Sony</td>
+                        <td class="o6">Audiovisuel</td>
+                        <td class="o6">Salle de Réunion 1</td>
+                        <td class="o6"><span class="p2 p4">En maintenance</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_eq" class="o8 o9 q6">Modifier</a>
+                                <label for="del_e2" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="o6 o1" id="row_e3">
+                        <td class="o6">EQ-003</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Machine à Café Jura</td>
+                        <td class="o6">Détente</td>
+                        <td class="o6">Espace Détente</td>
+                        <td class="o6"><span class="p2 p3">Opérationnel</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_eq" class="o8 o9 q6">Modifier</a>
+                                <label for="del_e3" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="o6 o1" id="row_e4" style="background: #f9fafb;">
+                        <td class="o6">EQ-004</td>
+                        <td class="o6" style="font-weight: 600; color: #1f2937;">Microphone Shure SM7B</td>
+                        <td class="o6">Audio</td>
+                        <td class="o6">Studio Podcast</td>
+                        <td class="o6"><span class="p2 p3">Opérationnel</span></td>
+                        <td class="o6">
+                            <div class="o7">
+                                <a href="#edit_eq" class="o8 o9 q6">Modifier</a>
+                                <label for="del_e4" class="o8 p1 q6" onclick="this.closest('tr').remove()">Supprimer</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Ajouter -->
+    <div id="add_eq" class="q2">
+        <div class="q3">
+            <a href="#" class="q4">&times;</a>
+            <h2 class="q5">Ajouter un Équipement</h2>
+            <form id="form_add_eq">
+                <div class="e5">
+                    <label class="e6">Nom de l'équipement</label>
+                    <input type="text" name="nom" class="e7" required>
+                </div>
+                <div class="e5">
+                    <label class="e6">Localisation</label>
+                    <input type="text" name="loc" class="e7" required>
+                </div>
+                <button type="submit" class="f2">Enregistrer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Modifier -->
+    <div id="edit_eq" class="q2">
+        <div class="q3">
+            <a href="#" class="q4">&times;</a>
+            <h2 class="q5">Modifier l'Équipement</h2>
+            <form id="form_edit_eq">
+                <div class="e5">
+                    <label class="e6">Nouveau Nom</label>
+                    <input type="text" name="nom" class="e7" required>
+                </div>
+                <div class="e5">
+                    <label class="e6">Nouvelle Localisation</label>
+                    <input type="text" name="loc" class="e7" required>
+                </div>
+                <button type="submit" class="f2">Mettre à jour</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="contact" class="d2">
+        <div class="d3">
+            <div>
+                <h3 class="d4">WorkHub Sousse</h3>
+                <p class="d5">Votre espace de coworking moderne conçu pour la productivité et l'innovation.</p>
+            </div>
+            <div>
+                <h3 class="d4">Liens rapides</h3>
+                <div class="d6">
+                    <a href="index.html" class="d7">Accueil</a>
+                    <a href="services.html" class="d7">Nos Espaces</a>
+                    <a href="pricing.html" class="d7">Tarifs</a>
+                    <a href="#contact" class="d7">Contact</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="d4">Horaires d'ouverture</h3>
+                <div class="d6">
+                    <p class="d5">Lun-Ven: 7h-22h</p>
+                    <p class="d5">Sam: 8h-20h</p>
+                    <p class="d5">Dim: 9h-18h</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="d4">Contact</h3>
+                <div class="d6">
+                    <p class="d5">Avenue Habib Bourguiba, Sousse</p>
+                    <p class="d5">+216 73 123 456</p>
+                    <p class="d5">contact@workhub-sousse.tn</p>
+                </div>
+            </div>
+        </div>
+        <div class="d8">
+            <p>Copyright © 2026 WorkHub Sousse</p>
+            <p>Projet étudiant ISG Sousse - Module AGL</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
